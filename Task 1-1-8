@@ -1,0 +1,20 @@
+public class CumulativeSum {
+    // Method to calculate cumulative sum and total sum
+    public static void calculateSum(int... numbers) {
+        int cumulativeSum = 0;
+        int totalSum = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            cumulativeSum += numbers[i];
+            totalSum += cumulativeSum;
+
+            System.out.println("Parameter " + (i + 1) + ": " + cumulativeSum);
+        }
+
+        System.out.println("Total Sum: " + totalSum);
+    }
+
+    public static void main(String[] args) {
+        calculateSum(4, 5, 10);
+    }
+}
