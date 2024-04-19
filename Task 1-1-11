@@ -1,3 +1,5 @@
+answer 1
+
 class Vehicle:
     def __init__(self, make, model, year):
         self.make = make
@@ -10,3 +12,78 @@ class Vehicle:
 # Example usage:
 car = Vehicle("Toyota", "Camry", 2022)
 car.display_info()  # Output: Vehicle: 2022 Toyota Camry
+
+
+answer 2
+
+class Car(Vehicle):
+    def __init__(self, make, model, year, numberOfDoors):
+        super().__init__(make, model, year)
+        self.numberOfDoors = numberOfDoors
+
+    def display_info(self):
+        super().display_info()
+        print(f"Number of Doors: {self.numberOfDoors}")
+
+# Example usage:
+car = Car("Toyota", "Camry", 2022, 4)
+car.display_info()
+
+
+
+answer 3
+
+class Vehicle:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def display_info(self):
+        print(f"Vehicle: {self.year} {self.make} {self.model}")
+
+
+class Car(Vehicle):
+    def __init__(self, make, model, year, numberOfDoors):
+        super().__init__(make, model, year)
+        self.numberOfDoors = numberOfDoors
+
+    def display_info(self):
+        super().display_info()
+        print(f"Number of Doors: {self.numberOfDoors}")
+
+# Creating an instance of the Car class and setting attribute values
+my_car = Car("Toyota", "Camry", 2022, 4)
+
+
+
+
+answer 4
+
+
+
+class Vehicle:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def display_info(self):
+        print(f"Vehicle: {self.year} {self.make} {self.model}")
+
+
+class Car(Vehicle):
+    def __init__(self, make, model, year, numberOfDoors):
+        super().__init__(make, model, year)
+        self.numberOfDoors = numberOfDoors
+
+    def display_info(self):
+        super().display_info()
+        print(f"Number of Doors: {self.numberOfDoors}")
+
+    def displayDetails(self):
+        self.display_info()
+
+# Creating an instance of the Car class and setting attribute values
+my_car = Car("Toyota", "Camry", 2022, 4)
+my_car.displayDetails()
